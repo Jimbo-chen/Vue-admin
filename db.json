@@ -1,0 +1,33 @@
+{
+    "users": [{
+        "id": 1,
+        "companyId": 1,
+        "name": "hery",
+        "age": 30,
+        "phone": "12345678910",
+        "email": "123@456.com"
+    }, {
+        "id": 2,
+        "companyId": 2,
+        "name": "aa",
+        "age": 30,
+        "phone": "12345678910",
+        "email": "aa@456.com"
+    }, {
+        "id": 3,
+        "companyId": 1,
+        "name": "ss",
+        "age": 30,
+        "phone": "12345678910",
+        "email": "ss@456.com"
+    }],
+    "companies": [{
+        "id": 1,
+        "name": "apple",
+        "des": "apple is good"
+    }, {
+        "id": 2,
+        "name": "google",
+        "des": "google is good"
+    }]
+}
