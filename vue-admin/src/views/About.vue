@@ -1,5 +1,7 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <el-main>
+      <h1>关于我们</h1>
+    </el-main>
   </div>
 </template>

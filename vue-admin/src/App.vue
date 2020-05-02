@@ -1,41 +1,64 @@
 <template>
   <div id="app">
-    <el-menu
-      :default-active="activeIndex"
-      class="el-menu-demo"
-      mode="horizontal"
-      @select="handleSelect"
-    >
-      <el-menu-item index="1">
-        <router-link to="/">Home</router-link>
-      </el-menu-item>
-      <el-menu-item index="2">
-        <router-link to="/about">About</router-link>
-      </el-menu-item>
-
-      <el-button type="primary">添加用户</el-button>
-    </el-menu>
+    <el-container>
+      <el-header>
+        <Cheader />
+      </el-header>
+      <el-main>
+        <h1>我想把内容放在这个里面</h1>
+      </el-main>
+      <el-footer>Footer</el-footer>
+    </el-container>
 
     <router-view />
   </div>
 </template>
 
+<script>
+// @ is an alias to /src
+import Cheader from "@/components/Cheader.vue";
+
+export default {
+  name: "App",
+  components: {
+    Cheader
+  }
+};
+</script>
+
 <style>
-.el-row {
-  margin-bottom: 20px;
+.el-header,
+.el-footer {
+  background-color: #b3c0d1;
+  color: #333;
+  text-align: center;
+  line-height: 60px;
 }
-.el-col {
-  border-radius: 4px;
+
+.el-aside {
+  background-color: #d3dce6;
+  color: #333;
+  text-align: center;
+  line-height: 200px;
 }
-.bg-purple-dark {
-  background: #99a9bf;
+
+.el-main {
+  background-color: #e9eef3;
+  color: #333;
+  text-align: center;
+  line-height: 160px;
 }
-.grid-content {
-  border-radius: 4px;
-  min-height: 36px;
+
+body > .el-container {
+  margin-bottom: 40px;
 }
-.row-bg {
-  padding: 10px 0;
-  background-color: #f9fafc;
+
+.el-container:nth-child(5) .el-aside,
+.el-container:nth-child(6) .el-aside {
+  line-height: 260px;
+}
+
+.el-container:nth-child(7) .el-aside {
+  line-height: 320px;
 }
 </style>
