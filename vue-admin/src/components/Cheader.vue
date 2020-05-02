@@ -1,11 +1,6 @@
 <template>
   <div class="cheader">
-    <el-menu
-      :default-active="activeIndex"
-      class="el-menu-demo"
-      mode="horizontal"
-      @select="handleSelect"
-    >
+    <el-menu class="el-menu-demo" mode="horizontal">
       <el-menu-item index="1">
         <router-link to="/">首页</router-link>
       </el-menu-item>

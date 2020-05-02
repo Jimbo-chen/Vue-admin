@@ -5,12 +5,12 @@
         <Cheader />
       </el-header>
       <el-main>
-        <h1>我想把内容放在这个里面</h1>
+        <router-view />
       </el-main>
       <el-footer>Footer</el-footer>
     </el-container>
 
-    <router-view />
+    
   </div>
 </template>
 
