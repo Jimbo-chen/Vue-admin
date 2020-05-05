@@ -1,14 +1,19 @@
 <template>
   <div class="custorments">
     <h3>这是首页用户列表</h3>
-    <el-table :data="tableData" style="width: 100%">
+    <el-table :data="users" style="width: 100%">
       <el-table-column prop="name" label="姓名" width="180"></el-table-column>
       <el-table-column prop="phone" label="电话" width="180"></el-table-column>
       <el-table-column prop="email" label="邮箱"></el-table-column>
       <el-table-column>
-        <el-button type="primary" icon="el-icon-edit"></el-button>
-        <el-button type="primary" icon="el-icon-share"></el-button>
-        <el-button type="primary" icon="el-icon-delete"></el-button>
+        <template slot-scope="scope">
+          <router-link :to="'/details/'+ users[scope.$index].id">
+            <el-button type="primary" icon="el-icon-edit"></el-button>
+          </router-link>
+          <router-link :to="'/details/'+ users[scope.$index].id">
+            <el-button type="primary" icon="el-icon-delete"></el-button>
+          </router-link>
+        </template>
       </el-table-column>
     </el-table>
   </div>
@@ -19,7 +24,8 @@ export default {
   name: "Custorments",
   created() {
     this.$http.get("http://localhost:3000/users").then(function(data) {
-      this.tableData = data.body;
+      this.users = data.body;
+      console.log(this.users);
     });
   },
   updated() {
@@ -32,7 +38,7 @@ export default {
   },
   data() {
     return {
-      tableData: []
+      users: []
     };
   }
 };
