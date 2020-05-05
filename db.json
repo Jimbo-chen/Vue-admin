@@ -1,33 +1,56 @@
 {
-    "users": [{
-        "id": 1,
-        "companyId": 1,
-        "name": "hery",
-        "age": 30,
-        "phone": "12345678910",
-        "email": "123@456.com"
-    }, {
-        "id": 2,
-        "companyId": 2,
-        "name": "aa",
-        "age": 30,
-        "phone": "12345678910",
-        "email": "aa@456.com"
-    }, {
-        "id": 3,
-        "companyId": 1,
-        "name": "ss",
-        "age": 30,
-        "phone": "12345678910",
-        "email": "ss@456.com"
-    }],
-    "companies": [{
-        "id": 1,
-        "name": "apple",
-        "des": "apple is good"
-    }, {
-        "id": 2,
-        "name": "google",
-        "des": "google is good"
-    }]
+  "users": [
+    {
+      "id": 1,
+      "companyId": 1,
+      "name": "hery",
+      "age": 30,
+      "phone": "12345678910",
+      "email": "123@456.com"
+    },
+    {
+      "id": 2,
+      "companyId": 2,
+      "name": "aa",
+      "age": 30,
+      "phone": "12345678910",
+      "email": "aa@456.com"
+    },
+    {
+      "id": 3,
+      "companyId": 1,
+      "name": "ss",
+      "age": 30,
+      "phone": "12345678910",
+      "email": "ss@456.com"
+    },
+    {
+      "name": "tim",
+      "age": "33",
+      "phone": "54888",
+      "email": "asdaf@agg.com",
+      "companyId": "1",
+      "id": 4
+    },
+    {
+      "name": "lks",
+      "age": "26",
+      "phone": "5514787952",
+      "email": "lsk@qq.com",
+      "companyId": "2",
+      "id": 5
+    }
+  ],
+  "companies": [
+    {
+      "id": 1,
+      "name": "apple",
+      "des": "apple is good"
+    },
+    {
+      "id": 2,
+      "name": "google",
+      "des": "google is good"
+    }
+  ]
 }
