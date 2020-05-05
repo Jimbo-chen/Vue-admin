@@ -8,7 +8,9 @@
         <router-link to="/about">关于我们</router-link>
       </el-menu-item>
 
-      <el-button type="primary">添加用户</el-button>
+      <el-button type="primary">
+        <router-link to="/add">添加用户</router-link>
+      </el-button>
     </el-menu>
   </div>
 </template>
