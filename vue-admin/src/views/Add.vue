@@ -51,12 +51,12 @@ export default {
         !this.users.email ||
         !this.users.companyId
       ) {
-        this.$message.error("错了哦，这是一条错误消息");
+        this.$message.error("请确认填写了所有信息");
       } else {
         this.$http
           .post("http://localhost:3000/users", this.users)
           .then(function() {
-            this.$router.push("/");
+            this.$router.push({ path: "/", query: { msg: "用户添加成功" } });
           });
       }
     }

@@ -5,6 +5,11 @@
       <el-table-column prop="name" label="姓名" width="180"></el-table-column>
       <el-table-column prop="phone" label="电话" width="180"></el-table-column>
       <el-table-column prop="email" label="邮箱"></el-table-column>
+      <el-table-column>
+        <el-button type="primary" icon="el-icon-edit"></el-button>
+        <el-button type="primary" icon="el-icon-share"></el-button>
+        <el-button type="primary" icon="el-icon-delete"></el-button>
+      </el-table-column>
     </el-table>
   </div>
 </template>
@@ -16,6 +21,14 @@ export default {
     this.$http.get("http://localhost:3000/users").then(function(data) {
       this.tableData = data.body;
     });
+  },
+  updated() {
+    if (this.$route.query.msg) {
+      this.$message({
+        message: "恭喜你，添加成功",
+        type: "success"
+      });
+    }
   },
   data() {
     return {
